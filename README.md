@@ -48,4 +48,5 @@ For CI/CD we can use Gitlab + Runners or Jenkins
 * Use a nice ALB in front of the application.
 * Access logs: it should be get from the ALB and saved to S3 with intelligent tiering, and then analize it with Athena if are needed.
 * Application logs: deploying the Cloudwatch agent on the cluster and then with fluentbit put all the data to cloudwatch is the best practice, is not the most cheap but then we are able to easily setup alarms, and query the logs with container insights, you can do the same with prometheus but is harder to manage, a study case is needed.
+* Use Helm to install, manage and upgrade all the Kubernetes applications.
 
