@@ -36,7 +36,7 @@ async def post_handler(request):
     user_id += 1
     username = names.get_first_name()
     user_db[user_id] = username
-    return text('POST - User {} has been added to the DB'.format(username),status=201)
+    return text('POST - User {} with {} has been added to the DB'.format(username,user_id),status=201)
 
 @app.route('/user/<user_id_request>', methods=['DELETE'])
 async def delete_handler(request,user_id_request):
