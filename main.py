@@ -11,7 +11,7 @@ app = Sanic(__name__)
 #Logging all the INFO localy only for this test, this should be handled properly, for the access logs it should be get from the ALB and saved to S3, and then analize-it with Athena. 
 logging.basicConfig(filename='logs.log',
                     filemode='a',
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(status)s - %(message)s',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt='%H:%M:%S',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)

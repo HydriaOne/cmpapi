@@ -2,7 +2,7 @@ import pytest
 import requests
 import json
 
-host = "http://localhost:80"
+host = "https://cmpapi.imina.cat"
 userid = '1'
 path = 'user'
 
@@ -13,7 +13,7 @@ def test_add_user():
     headers = {}
     # If we'll add additional payload.
     payload = {}
-    
+
     url = host + '/'+ path
     resp = requests.request("POST", url, headers=headers, data=payload)
     # Validate response status code if it is 201 content created successfully
@@ -24,7 +24,7 @@ def test_recive_user():
     headers = {}
     # If we'll add additional payload.
     payload = {}
-    
+
     url = host + '/' + path + '/' + userid
     resp = requests.request("GET", url, headers=headers, data=payload)
     # Validate response status code if it is 200, and the content is diferent to None everything is ok.
@@ -37,7 +37,7 @@ def test_delete_user():
     headers = {}
     # If we'll add additional payload.
     payload = {}
-    
+
     url = host + '/' + path + '/' + userid
     resp = requests.request("DELETE", url, headers=headers, data=payload)
     # Validate response status code if it is 200, deleted complete, if is it 404 throw an error.
@@ -48,8 +48,9 @@ def test_all_users():
     headers = {}
     # If we'll add additional payload.
     payload = {}
-    
+
     url = host + '/allusers'
     resp = requests.request("GET", url, headers=headers, data=payload)
     # Validate response status code if it is 200, and the content is diferent to None everything is ok.
     assert resp.status_code == 200
+

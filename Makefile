@@ -10,5 +10,8 @@ deploy:
 	kubectl apply -f ./k8s
 push_image:
 	docker image push --all-tags hydria/cmpapi
+destroy:
+	kubectl delete -f ./k8s
 test:
 	pytest ./test.py
+

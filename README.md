@@ -3,13 +3,22 @@
 
 Is a simple REST API. This API code  run in a Kubernetes cluster.
 
-Is build with Python and Sanic.
+Is build with Python 3.9 and Sanic.
 
 ## How to use it
-``` 
+
+PreRequisits:
+
+ * Python 3.9, Pytest, Requests
+ * Create the new k8s namespace (kubectl create ns cmpapi)
+
+ Commands:
+```
 - make build: : Build and push the image.
 
 - make deploy : Deploy the app on your kubernetes cluster.
+
+- make destroy : Destroy the app on your kubernetes cluster.
 
 - make test : Run functional tests to check that the API is working.
 ```
@@ -39,3 +48,4 @@ For CI/CD we can use Gitlab + Runners or Jenkins
 * Use a nice ALB in front of the application.
 * Access logs: it should be get from the ALB and saved to S3 with intelligent tiering, and then analize it with Athena if are needed.
 * Application logs: deploying the Cloudwatch agent on the cluster and then with fluentbit put all the data to cloudwatch is the best practice, is not the most cheap but then we are able to easily setup alarms, and query the logs with container insights, you can do the same with prometheus but is harder to manage, a study case is needed.
+
