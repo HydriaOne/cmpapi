@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "b23d6224-2d1c-48f1-901a-8a950d2e9b42",
+		"name": "CMAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/user",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"user"
+					]
+				},
+				"description": "Add User"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/user/1",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				},
+				"description": "Retrieves a specific user"
+			},
+			"response": []
+		},
+		{
+			"name": "ReciveUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/user/1",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				},
+				"description": "Retrieves a specific user"
+			},
+			"response": []
+		},
+		{
+			"name": "AllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/allusers",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"allusers"
+					]
+				},
+				"description": "Retrieves a specific user"
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/health",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"health"
+					]
+				},
+				"description": "Health"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Host",
+			"value": "https://cmpapi.imina.cat"
+		}
+	]
+}
